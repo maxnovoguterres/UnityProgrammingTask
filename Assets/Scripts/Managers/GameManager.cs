@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
         
         PlayerEntity = FindAnyObjectByType<PlayerCharacterController>().GetComponent<Entity>();
         CameraController = FindAnyObjectByType<CameraController>();
-        CameraController?.Setup();
+        CameraController?.Setup(PlayerEntity);
         GameplayUIManager = FindAnyObjectByType<GameplayUIManager>();
         GameplayUIManager?.Setup(PlayerEntity);
         GC.Collect();

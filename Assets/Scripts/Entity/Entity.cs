@@ -50,6 +50,21 @@ public class Entity : MonoBehaviour
             return;
         }
 
+        if (StatsComponent != null)
+        {
+            StatsComponent.Setup(this);
+        }
+
+        if (HealthComponent != null)
+        {
+            HealthComponent.Setup(this);
+        }
+
+        if (CharacterController != null)
+        {
+            CharacterController.Setup(this);
+        }
+        
         var shouldRegisterEntity = ForceRegisterEntity;
         if (shouldRegisterEntity)
         {
